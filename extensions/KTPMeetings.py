@@ -8,7 +8,7 @@ from typing import Annotated as Atd
 @flare.button(label="Click to submit attendance", style=hikari.ButtonStyle.SUCCESS)
 async def meetingsbtn(ctx: flare.MessageContext):
     date_time = datetime.datetime.now()
-    await plugin.app.rest.create_message(channel=1058374194888441876, content=f"{ctx.user.id} at <t:{int(time.mktime(date_time.timetuple()))}> will be attending.")
+    await plugin.app.rest.create_message(channel=CHANNEL_ID, content=f"{ctx.user.id} at <t:{int(time.mktime(date_time.timetuple()))}> will be attending.")
     await ctx.respond(content=":white_check_mark: | Your attendance has been submitted.", flags=hikari.MessageFlag.EPHEMERAL)
 
 plugin = crescent.Plugin()
