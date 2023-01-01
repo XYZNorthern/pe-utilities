@@ -8,7 +8,7 @@ from typing import Annotated as Atd
 @flare.button(label="Click here.", style=hikari.ButtonStyle.PRIMARY)
 async def btn(ctx: flare.MessageContext) -> None:
     date_time = datetime.datetime.now()
-    await plugin.app.rest.create_message(channel=1058355587609526294, content=f"{ctx.user.id} at <t:{int(time.mktime(date_time.timetuple()))}> will be attending.")
+    await plugin.app.rest.create_message(channel=CHANNEL_ID, content=f"{ctx.user.id} at <t:{int(time.mktime(date_time.timetuple()))}> will be attending.")
     await ctx.respond(content=":white_check_mark: | Your attendance has been submitted.", flags=hikari.MessageFlag.EPHEMERAL)
 
 plugin = crescent.Plugin()
