@@ -1,2 +1,2 @@
-# pt-utilities
-This is the official repository for PT Utilities.
+# pe-utilities
+This is the official repository for PE Utilities.
